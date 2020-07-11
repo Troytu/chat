@@ -66,7 +66,7 @@ const CHAT={
 
 		if (!this.userid) {return}
 		
-		this.socket = io.connect('ws://localhost:3000');
+		this.socket = io.connect('wss://chat-demo-server.herokuapp.com');
 		
 		
 		this.socket.emit('login', {userid:this.userid, username:this.username,color:this.color,weichat:this.weichat});

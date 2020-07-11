@@ -30,27 +30,13 @@ export default {
     if (!localStorage.getItem('name')) {
       this.$router.go('/login')
     }
-    this.visit()  
   },
   components:{
     OtherMsg,
     SelfMsg,
     SystemMsg
-  },
-  methods:{
-    visit(){
-      let xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://item.redream.cn/statistics/chat/chat_visit.php');
-　　  xhr.send();
-      xhr.onreadystatechange = function(){
-  　　　　if ( xhr.readyState == 4 && xhr.status == 200 ) {
-  // 　　　　　　alert( xhr.responseText );
-  　　　　} else {
-  // 　　　　　　alert( xhr.statusText );
-  　　　　}
-  　　}
-    }
   }
+
 }
 </script>
 
